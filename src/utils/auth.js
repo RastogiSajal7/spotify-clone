@@ -1,5 +1,5 @@
 const CLIENT_ID = 'ffa87be766a84cd9914f84d71089175d';
-const REDIRECT_URI = 'http://localhost:5173/home';
+const REDIRECT_URI = 'https://spot-clon.vercel.app/';
 const AUTH_ENDPOINT = 'https://accounts.spotify.com/authorize';
 const RESPONSE_TYPE = 'token';
 
