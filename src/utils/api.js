@@ -27,7 +27,7 @@ const getUserPlaylists = async (token) => {
         },
       });
       playlists = [...playlists, ...response.data.items];
-      url = response.data.next; // Ensure we handle pagination
+      url = response.data.next; 
     }
     console.log('Playlists:', playlists);
     return playlists;
