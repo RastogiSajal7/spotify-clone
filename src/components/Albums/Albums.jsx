@@ -21,7 +21,7 @@ const Albums = () => {
   }, [token, dispatch]);
 
   const handleAlbumClick = async (album) => {
-    const tracks = await getAlbumTracks(token, album.id);
+    const tracks = await getAlbumTracks(token, album.id, album.images[0]?.url);
     dispatch(setCurrentAlbum({ album, tracks }));
   };
 

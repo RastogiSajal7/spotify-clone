@@ -111,4 +111,32 @@ const getTrack = async (token, trackId) => {
   }
 };
 
-export { getUserProfile, getUserPlaylists, getPlaylistTracks, getNewReleases, getAlbumTracks, searchTracks, getTrack };
+const getFeaturedPlaylists = async (accessToken) => {
+  try {
+    const response = await axios.get(`${BASE_URL}/browse/featured-playlists`, {
+      headers: {
+        Authorization: `Bearer ${accessToken}`,
+      },
+    });
+    return response.data.playlists.items;
+  } catch (error) {
+    console.error('Error fetching featured playlists:', error);
+    throw error;
+  }
+};
+
+const getCategories = async (accessToken) => {
+  try {
+    const response = await axios.get(`${BASE_URL}/browse/categories`, {
+      headers: {
+        Authorization: `Bearer ${accessToken}`,
+      },
+    });
+    return response.data.categories.items;
+  } catch (error) {
+    console.error('Error fetching categories:', error);
+    throw error;
+  }
+};
+
+export { getUserProfile, getUserPlaylists, getPlaylistTracks, getNewReleases, getAlbumTracks, searchTracks, getTrack, getFeaturedPlaylists, getCategories };

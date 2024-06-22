@@ -7,6 +7,8 @@ import currentPlaylistReducer from './slices/currentPlaylistSlice';
 import albumsReducer from './slices/albumsSlice';
 import currentAlbumReducer from './slices/currentAlbumSlice';
 import playerReducer from './slices/playerSlice';
+import componentReducer from './slices/currentComponentSlice';
+import discoverReducer from './slices/discoverSlice';
 
 const store = configureStore({
   reducer: {
@@ -18,6 +20,8 @@ const store = configureStore({
     albums: albumsReducer,
     currentAlbum: currentAlbumReducer,
     player: playerReducer,
+    component: componentReducer,
+    discover: discoverReducer,
   },
 });
 

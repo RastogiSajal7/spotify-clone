@@ -31,14 +31,7 @@ const Home = () => {
 
   return (
     <>
-   {/* <div className="home">
-     <h1>Welcome to Spotify Clone</h1>
-     {user && <p>{`Hello, ${user.display_name}`}</p>}
-     <Search />
-     <Playlists />
-     <Player />
-   </div> */}
-    <div className='grid grid-cols-12 h-screen p-2 gap-2 bg-black'>
+    <div className='grid grid-cols-12 h-screen p-2 gap-2 bg-black overflow-hidden '>
       <div className="col-span-3"><Dashboard/></div>
       <div className="col-span-7"><Content/></div>
       <div className="col-span-2"><Showcase/></div>

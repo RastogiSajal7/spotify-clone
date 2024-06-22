@@ -21,16 +21,16 @@ const Search = () => {
   };
 
   return (
-    <div className="search">
-      <h2>Search</h2>
+    <div className="search ml-20 h-5 -mt-3">
       <form onSubmit={handleSearch}>
         <input
+        className='rounded-2xl h-8'
           type="text"
           value={query}
           onChange={(e) => setQuery(e.target.value)}
           placeholder="Search for a track"
         />
-        <button type="submit">Search</button>
+        <button type="submit" className='bg-neutral-400 text-white p-1 rounded-lg h-8'>Search</button>
       </form>
     </div>
   );

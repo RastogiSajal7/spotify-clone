@@ -15,10 +15,9 @@ function App() {
           <Login />
         ) : (
           <Routes>
-            <Route path="/home" exact element={<Home/>} />
-            {/* Add more routes as needed */}
+            <Route path="/home" element={<Home/>} />
           </Routes>
-        )}
+        )} 
       </div>
     </Router>
   );
